@@ -26,7 +26,7 @@ public class Pausa : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             isPaused = isPaused ? Continuar() : Pausar();
         }
 
@@ -43,11 +43,16 @@ public class Pausa : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Start();
             Time.timeScale = 1f;
             SceneManager.LoadScene("SimuladorChoqueInelastico");
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
